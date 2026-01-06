@@ -16,7 +16,6 @@ def plot_windows():
         'Hamming': fn.hamming(M),
         'Hann': fn.hanning(M)
     }
-
     fig, axs = plt.subplots(3, 2, figsize=(12, 12))
     fig.suptitle('Wpływ okien na widmo (Amplituda i Faza)', fontsize=16)
 
