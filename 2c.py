@@ -15,7 +15,6 @@ h = h / np.sum(h)
 conv_time = np.convolve(sig, h, mode='full')
 
 L = len(sig) + len(h) - 1
-
 SIG_fft = fn.my_fft(sig, n=L)
 H_fft   = fn.my_fft(h, n=L)
 

@@ -21,7 +21,6 @@ def add_impulse_noise(signal, probability=0.05, amplitude=3.0):
     return noisy_signal
 
 if __name__ == "__main__":
-    print("--- Realizacja Zadania B ---")
     fs = 100.0
     n = 200 
     t, clean_sig = generate_signal(n, fs)
@@ -50,7 +49,6 @@ if __name__ == "__main__":
     plt.legend()
     plt.grid(True)
 
-    print("2. Szum Impulsowy: Porównanie LowPass (Freq) vs Mediana (Time)")
     noisy_impulse = add_impulse_noise(clean_sig)
 
     F_imp = fn.my_fft(noisy_impulse)
