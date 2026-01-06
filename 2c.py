@@ -24,7 +24,6 @@ Y_fft = SIG_fft * H_fft
 conv_freq = np.real(fn.my_ifft(Y_fft, n=L))
 
 diff = np.max(np.abs(conv_time - conv_freq))
-print(f"Maksymalna różnica między metodami: {diff:.5e}")
 
 plt.figure(figsize=(10, 5))
 plt.title(f"Twierdzenie o splocie: max różnica = {diff:.2e}")

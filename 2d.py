@@ -3,13 +3,9 @@ import matplotlib.pyplot as plt
 import functions as fn
 import os
 
-
-
-
 plt.rcParams['figure.figsize'] = [12, 10]
 plt.rcParams['font.size'] = 10
 plt.style.use('bmh') 
-
 
 def plot_windows():
     M = 64  
@@ -57,7 +53,6 @@ def plot_windows():
     plt.tight_layout()
     plt.savefig('output_img/windows.png')
 
-
 def plot_aliasing():
     t_end = 1.0
     f_signal = 9.0 
@@ -91,7 +86,5 @@ def plot_aliasing():
 if __name__ == "__main__":
     if not os.path.exists("output_img"):
         os.makedirs("output_img")
-    print("Generuję wykresy okien...")
     plot_windows()
-    print("Generuję demonstrację aliasingu...")
     plot_aliasing()
